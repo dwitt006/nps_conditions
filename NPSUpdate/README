@@ -1,0 +1,55 @@
+README FILE
+
+CONTENTS
+	I.		Introduction
+	II.		Minimum Requirements
+	III.	Operation
+	IV.		File Contents
+	
+I. INTRODUCTION
+	NAME:		nps_update
+	WRITER: 	Draper Wittkopp
+	COURSE: 	CS411: Professional Workforce Development II
+	GROUP:  	Black: Hike Planner
+	DATE:   	04 May 2016
+	UPDATE: 	17 August 2016
+	SUMMARY:	Retrieves the url for individual parks from the NPS website,
+				creates a list of all the parks and their websites, and outputs
+				the data into a file.
+			
+II. MINIMUM REQUIREMENTS
+	Operating System:	Is designed from and should run on any linux distribution
+						*Has not been tested for Windows or Mac OS
+	Interpreter:		Python 2.6.7 or newer
+	
+III. OPERATION
+	*Terminal must be operated from location of nps_update.py
+	Primary Operation:	python nps_update.py
+	Options:			-o : 	Change location or type of output file
+								*Only standard text and csv files are functional
+								Example:	python nps_update.py -o ./otherDirectory/nps_update.txt
+						-p :	Print results to screen
+						-u :	Changes the NPS url used to obtain the of parks and their condition url's
+								*If the default url is discontinued use, the nps_update HTMLParser will
+								most likely require modification
+	Example:			python nps_update.py -op ./otherDirectory/nps_update.csv
+	Testing Example:	python nps_update_test.py
+						*nps_update_test.py must be in same location as nps_update.py
+						*Directory nps_update_testing must be in same location as nps_update_test.py
+						*Contents must remain in directory nps_update_testing
+								
+IV. FILE CONTENTS
+	nps_update.py			-Primary code
+	nps_update_test.py		-Code for testing
+	nps_parks.txt			-Example standard text output file
+	nps_parks.csv			-Example csv output file
+	README					-Current README file
+	nps_update_testing		-Directory for test files
+		/TestFileType.cpp
+		/TestFileType.csv
+		/TestFileType.txt
+		/TestPrintToFileCompare.txt
+		/TestPrintToFileResult.txt
+		/TestPrintToSheetCompare.csv
+		/TestPrintToSheetResult.csv
+	

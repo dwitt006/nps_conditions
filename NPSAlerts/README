@@ -1,0 +1,64 @@
+README FILE
+
+CONTENTS
+	I.		Introduction
+	II.		Minimum Requirements
+	III.	Operation
+	IV.		File Contents
+	
+I. INTRODUCTION
+	NAME:   	nps_alerts
+	WRITER: 	Draper Wittkopp
+	COURSE: 	CS411: Professional Workforce Development II
+	GROUP:  	Black: Hike Planner
+	DATE:   	01 June 2016
+	UPDATE: 	20 August 2016
+	SUMMARY:	Retrieves alerts and conditions from the National Park Service. A list of parks and their URLs are provided to the
+				program in a file (nps_update). The HTML is then accessed from the URLs and scanned for alerts and conditions.
+				The alerts and conditions are then put into a file.
+				
+II. MINIMUM REQUIREMENTS
+	Operating System:	Is designed from and should run on any linux distribution
+						*Has not been tested for Windows or Mac OS
+	Interpreter:		Python 2.6.7 or newer
+	
+III. OPERATION
+	*Terminal must be operated from location of nps_alerts.py
+	Primary Operation:	python nps_alerts_v2.py
+	Options:			-i : 	Change location or type of input file
+								*Only standard text and csv files are functional
+								Example:	python nps_alerts_v2.py -o ./otherDirectory/nps_parks.txt
+						-o : 	Change location or type of output file
+								*Only standard text and csv files are functional
+								Example:	python nps_alerts_v2.py -o ./otherDirectory/nps_alerts.txt
+						-p :	Print results to screen
+						-P :	Implements parallel programming through threads
+						-u :	Changes the URL count used by each thread individually
+	Example:			python nps_alerts_v2.py -opiPu ./otherDirectory/output.csv ./otherDirectory/input.csv 15
+	Testing Example:	python nps_alerts_test.py
+						*nps_alerts_test.py must be in same location as nps_alerts_v2.py
+						*Directory nps_alerts_testing must be in same location as nps_alerts_test.py
+						*Contents must remain in directory nps_alerts_testing
+						
+IV. FILE CONTENTS
+	nps_alerts_v2.py		-Primary code
+	nps_alerts_test_test.py	-Code for testing
+	nps_parks.txt			-Example standard text input file
+	nps_alerts.txt			-Example standard text output file
+	nps_alerts.csv			-Example csv output file
+	README					-Current README file
+	nps_alerts_testing		-Directory for test files
+		/TestGetHTML1
+		/TestGetHTML2
+		/TestGetHTML3
+		/TestFileType.cpp
+		/TestFileType.csv
+		/TestFileType.txt
+		/TestPrintToFileCompare.txt
+		/TestPrintToFileResult.txt
+		/TestPrintToSheetCompare.csv
+		/TestPrintToSheetResult.csv
+		/TestReadFile.cpp
+		/TestReadFile.txt
+		/TestReadSheet.csv
+	
